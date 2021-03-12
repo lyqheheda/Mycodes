@@ -20,5 +20,7 @@ from calc import views as calc_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('add/',calc_views.add,name='add'),
-    path('add/<int:a>/<int:b>/',calc_views.add2,name='add2'),
+    path('add/<int:a>/<int:b>/',calc_views.old_add2_redirect),
+    path('',calc_views.index,name='home'),
+    path('new_add/<int:a>/<int:b>/',calc_views.add2,name='add2'),
 ]
